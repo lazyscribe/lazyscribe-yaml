@@ -8,7 +8,7 @@ fsspec==2025.5.1
     # via lazyscribe
 importlib-metadata==8.7.0
     # via lazyscribe
-lazyscribe==1.2.0
+lazyscribe @ git+https://github.com/lazyscribe/lazyscribe@94bbf0be53b1e728178fa893da1dfd19aa3bfb0e
     # via lazyscribe-yaml (pyproject.toml)
 python-slugify==8.0.4
     # via lazyscribe
