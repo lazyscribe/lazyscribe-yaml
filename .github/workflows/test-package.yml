@@ -1,0 +1,57 @@
+# Install and test
+
+name: Python package
+
+on:
+    push:
+        branches:
+            - develop
+            - main
+    pull_request:
+        branches:
+            - develop
+            - main
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                python-version:
+                    - '3.10'
+                    - '3.11'
+                    - '3.12'
+                    - '3.13'
+        steps:
+            - uses: actions/checkout@v5
+
+            - name: Install uv and set the Python version
+              uses: astral-sh/setup-uv@v6
+              with:
+                python-version: ${{ matrix.python-version }}
+
+            - name: Install dependencies
+              run: uv sync --locked --all-extras --dev
+
+            - name: Run ruff QA checks
+              run: uv run ruff check .
+
+            - name: Check formatting
+              run: uv run ruff format . --check
+
+            - name: Check static typing
+              run: uv run mypy lazyscribe_yaml
+
+            - name: Run unit testing
+              run: uv run pytest tests --ignore=tests/test_lazyscribe_integration --cov=./ --cov-report=xml
+
+            - name: Run integration testing
+              run: uv run pytest tests/test_lazyscribe_integration
+
+            - name: Run Codecov
+              uses: codecov/codecov-action@v3
+              with:
+                token: ${{ secrets.CODECOV_TOKEN }}
+                fail_ci_if_error: true
+                files: ./coverage.xml
+                verbose: true
