@@ -42,7 +42,7 @@ iniconfig==2.1.0
     # via pytest
 jinja2==3.1.6
     # via commitizen
-lazyscribe==1.2.0
+lazyscribe @ git+https://github.com/lazyscribe/lazyscribe@94bbf0be53b1e728178fa893da1dfd19aa3bfb0e
     # via lazyscribe-yaml (pyproject.toml)
 markupsafe==3.0.2
     # via jinja2
@@ -116,6 +116,8 @@ tomlkit==0.11.4
     #   commitizen
     #   edgetest
 types-python-slugify==8.0.2.20240310
+    # via lazyscribe-yaml (pyproject.toml)
+types-pyyaml==6.0.12.20250915
     # via lazyscribe-yaml (pyproject.toml)
 typing-extensions==4.15.0
     # via

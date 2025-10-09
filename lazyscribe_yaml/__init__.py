@@ -14,6 +14,7 @@ try:
     from yaml import CSafeLoader as SafeLoader
 except ImportError:  # pragma: no cover
     from yaml import SafeLoader  # type: ignore[assignment]
+
 from attrs import define
 from lazyscribe.artifacts.base import Artifact
 from slugify import slugify
@@ -87,7 +88,7 @@ class YAMLArtifact(Artifact):
             The artifact.
         """
         created_at = created_at or utcnow()
-        return cls(
+        return cls(  # type: ignore[call-arg]
             name=name,
             value=value,
             fname=fname
