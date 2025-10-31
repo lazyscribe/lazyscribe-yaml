@@ -24,7 +24,7 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
 ]
-dependencies = [ "attrs>=21.2,<=25.3", "lazyscribe", "pyyaml>=5.4,<=6.0.3" ]
+dependencies = [ "attrs>=21.2,<=25.3", "lazyscribe==2.0.0a0", "pyyaml>=5.4,<=6.0.3" ]
 
 optional-dependencies.build = [ "commitizen", "uv" ]
 optional-dependencies.dev = [ "lazyscribe-yaml[build]", "lazyscribe-yaml[qa]", "lazyscribe-yaml[tests]" ]
@@ -83,9 +83,6 @@ check_untyped_defs = true
 [tool.uv.build-backend]
 module-name = "lazyscribe_yaml"
 module-root = ""
-
-[tool.uv.sources]
-lazyscribe = { git = "https://github.com/lazyscribe/lazyscribe", branch = "remove-yaml-handler" }
 
 [tool.commitizen]
 version_provider = "uv"
