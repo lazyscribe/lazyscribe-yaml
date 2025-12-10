@@ -4,9 +4,9 @@ attrs==25.3.0
     # via
     #   lazyscribe-yaml (pyproject.toml)
     #   lazyscribe
-fsspec==2025.5.1
+fsspec==2025.10.0
     # via lazyscribe
-lazyscribe==2.0.0a0
+lazyscribe==2.0.0a1
     # via lazyscribe-yaml (pyproject.toml)
 python-slugify==8.0.4
     # via lazyscribe
