@@ -21,8 +21,7 @@ repos:
           --namespace-packages,
           --explicit-package-bases,
           --ignore-missing-imports,
-          --non-interactive,
-          --install-types
+          --non-interactive
         ]
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.8.19
