@@ -5,7 +5,7 @@ requires = [ "uv-build>=0.8,<0.9" ]
 
 [project]
 name = "lazyscribe-yaml"
-version = "0.1.1"
+version = "0.1.2"
 
 description = "YAML-based artifact handler for Lazyscribe"
 readme = { file = "README.md", content-type = "text/markdown" }
@@ -24,7 +24,7 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
 ]
-dependencies = ["attrs<=25.4.0,>=21.2", "lazyscribe<=2.0.0a1,>=2.0.0a0", "pyyaml<=6.0.3,>=5.4"]
+dependencies = ["attrs<=25.4.0,>=21.2", "lazyscribe<=2.0.0,>=2.0.0a0", "pyyaml<=6.0.3,>=5.4"]
 
 optional-dependencies.build = ["commitizen", "uv"]
 optional-dependencies.dev = ["lazyscribe-yaml[build]", "lazyscribe-yaml[qa]", "lazyscribe-yaml[tests]"]
