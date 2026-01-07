@@ -57,6 +57,7 @@ class YAMLArtifact(Artifact):
         value: Any = None,
         fname: str | None = None,
         created_at: datetime | None = None,
+        expiry: datetime | None = None,
         writer_kwargs: dict[str, Any] | None = None,
         version: int = 0,
         dirty: bool = True,
@@ -76,6 +77,8 @@ class YAMLArtifact(Artifact):
             the name of the artifact and the suffix for the class.
         created_at : datetime.datetime, optional (default ``lazyscribe._utils.utcnow()``)
             When the artifact was created.
+        expiry : datetime.datetime, optional (default None)
+            When the artifact expired.
         writer_kwargs : dict[str, Any], optional (default {})
             Keyword arguments for writing an artifact to the filesystem. Provided when an artifact
             is logged to an experiment.
@@ -94,6 +97,7 @@ class YAMLArtifact(Artifact):
             fname=fname
             or f"{slugify(name)}-{slugify(created_at.strftime('%Y%m%d%H%M%S'))}.{cls.suffix}",
             created_at=created_at,
+            expiry=expiry,
             writer_kwargs=writer_kwargs or {},
             version=version,
             dirty=dirty,
