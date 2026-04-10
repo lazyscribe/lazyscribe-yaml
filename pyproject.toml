@@ -72,6 +72,9 @@ lint.flake8-tidy-imports.ban-relative-imports = "all"
 lint.pydocstyle.convention = "numpy"
 lint.preview = true
 
+[tool.coverage]
+run.relative_files = true
+
 [tool.mypy]
 python_version = "3.10"
 warn_return_any = true
