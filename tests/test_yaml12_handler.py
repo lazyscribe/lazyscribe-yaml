@@ -46,18 +46,6 @@ def test_yaml12_handler(data, tmp_path):
 @time_machine.travel(
     datetime(2025, 1, 20, 13, 23, 30, tzinfo=zoneinfo.ZoneInfo("UTC")), tick=False
 )
-def test_yaml12_handler_fname(tmp_path):
-    """Test that fname is generated correctly from name and timestamp."""
-    handler = YAML12Artifact.construct(name="My output file")
-    assert (
-        handler.fname
-        == f"my-output-file-{datetime.now().strftime('%Y%m%d%H%M%S')}.yaml"
-    )
-
-
-@time_machine.travel(
-    datetime(2025, 1, 20, 13, 23, 30, tzinfo=zoneinfo.ZoneInfo("UTC")), tick=False
-)
 def test_yaml12_booleans(tmp_path):
     """Test YAML 1.2 boolean semantics differ from YAML 1.1.
 

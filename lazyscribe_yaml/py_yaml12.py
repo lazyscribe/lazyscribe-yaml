@@ -13,6 +13,8 @@ from lazyscribe.artifacts.base import Artifact
 from slugify import slugify
 from yaml12 import read_yaml, write_yaml
 
+__all__: list[str] = ["YAML12Artifact"]
+
 LOG = logging.getLogger(__name__)
 
 
@@ -124,6 +126,6 @@ class YAML12Artifact(Artifact):
         buf : file-like object
             The buffer from a ``fsspec`` filesystem.
         **kwargs
-            Keyword arguments for :py:meth:`yaml.dump`.
+            Keyword arguments for :py:meth:`yaml12.write_yaml`.
         """
         write_yaml(obj, buf, **kwargs)
