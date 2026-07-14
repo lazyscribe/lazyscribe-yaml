@@ -4,11 +4,14 @@
 
 | Name                             |    Stmts |     Miss |   Cover |   Missing |
 |--------------------------------- | -------: | -------: | ------: | --------: |
-| lazyscribe\_yaml/\_\_init\_\_.py |       33 |        0 |    100% |           |
+| lazyscribe\_yaml/\_\_init\_\_.py |        3 |        0 |    100% |           |
 | lazyscribe\_yaml/\_meta.py       |        1 |        1 |      0% |         3 |
-| tests/smoke\_test.py             |       11 |        0 |    100% |           |
+| lazyscribe\_yaml/py\_yaml12.py   |       28 |        0 |    100% |           |
+| lazyscribe\_yaml/pyyaml.py       |       33 |        0 |    100% |           |
+| tests/smoke\_test.py             |       19 |        0 |    100% |           |
+| tests/test\_yaml12\_handler.py   |       82 |        0 |    100% |           |
 | tests/test\_yaml\_handler.py     |       40 |        0 |    100% |           |
-| **TOTAL**                        |   **85** |    **1** | **99%** |           |
+| **TOTAL**                        |  **206** |    **1** | **99%** |           |
 
 
 ## Setup coverage badge
