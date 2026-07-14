@@ -103,5 +103,5 @@ version_files = [
 
 [edgetest.envs.core]
 extras = [ "tests" ]
-upgrade = [ "attrs", "lazyscribe", "pyyaml", "python-slugify" ]
+upgrade = [ "attrs", "lazyscribe", "pyyaml", "py-yaml12", "python-slugify" ]
 command = "pytest tests"
