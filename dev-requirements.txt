@@ -2,6 +2,8 @@
 #    uv pip compile pyproject.toml -o dev-requirements.txt --extra dev
 argcomplete==3.6.3
     # via commitizen
+ast-serialize==0.6.0
+    # via mypy
 attrs==26.1.0
     # via
     #   lazyscribe-yaml (pyproject.toml)
@@ -10,56 +12,56 @@ cerberus==1.3.8
     # via edgetest
 cfgv==3.5.0
     # via pre-commit
-charset-normalizer==3.4.7
+charset-normalizer==3.4.9
     # via commitizen
-click==8.3.1
+click==8.4.1
     # via edgetest
 colorama==0.4.6
     # via commitizen
-commitizen==4.13.9
+commitizen==4.16.4
     # via lazyscribe-yaml (pyproject.toml)
-coverage==7.13.5
+coverage==7.15.1
     # via pytest-cov
 decli==0.6.3
     # via commitizen
 deprecated==1.3.1
     # via commitizen
-distlib==0.4.0
+distlib==0.4.3
     # via virtualenv
-edgetest==2026.4.0
+edgetest==2026.5.1
     # via lazyscribe-yaml (pyproject.toml)
-filelock==3.25.2
+filelock==3.29.7
     # via
     #   python-discovery
     #   virtualenv
 fsspec==2026.3.0
     # via lazyscribe
-identify==2.6.18
+identify==2.6.19
     # via pre-commit
 iniconfig==2.3.0
     # via pytest
 jinja2==3.1.6
     # via commitizen
-lazyscribe==2.1.0
+lazyscribe==2.2.1
     # via lazyscribe-yaml (pyproject.toml)
-librt==0.9.0
+librt==0.13.0
     # via mypy
 markupsafe==3.0.3
     # via jinja2
-mypy==1.20.0
+mypy==2.3.0
     # via lazyscribe-yaml (pyproject.toml)
 mypy-extensions==1.1.0
     # via mypy
 nodeenv==1.10.0
     # via pre-commit
-packaging==26.0
+packaging==26.2
     # via
     #   commitizen
     #   edgetest
     #   pytest
-pathspec==1.0.4
+pathspec==1.1.1
     # via mypy
-platformdirs==4.9.6
+platformdirs==4.10.0
     # via
     #   python-discovery
     #   virtualenv
@@ -68,25 +70,27 @@ pluggy==1.6.0
     #   edgetest
     #   pytest
     #   pytest-cov
-pre-commit==4.5.1
+pre-commit==4.6.0
     # via lazyscribe-yaml (pyproject.toml)
 prompt-toolkit==3.0.51
     # via
     #   commitizen
     #   questionary
+py-yaml12==0.1.0
+    # via lazyscribe-yaml (pyproject.toml)
 pygments==2.20.0
     # via pytest
-pyproject-fmt==2.16.0
+pyproject-fmt==2.21.2
     # via
     #   lazyscribe-yaml (pyproject.toml)
     #   edgetest
-pytest==9.0.3
+pytest==9.1.1
     # via
     #   lazyscribe-yaml (pyproject.toml)
     #   pytest-cov
 pytest-cov==7.1.0
     # via lazyscribe-yaml (pyproject.toml)
-python-discovery==1.2.2
+python-discovery==1.4.4
     # via virtualenv
 python-slugify==8.0.4
     # via lazyscribe
@@ -97,9 +101,9 @@ pyyaml==6.0.3
     #   pre-commit
 questionary==2.1.1
     # via commitizen
-ruff==0.15.10
+ruff==0.15.21
     # via lazyscribe-yaml (pyproject.toml)
-tabulate==0.9.0
+tabulate==0.10.0
     # via edgetest
 termcolor==3.3.0
     # via commitizen
@@ -107,25 +111,25 @@ text-unidecode==1.3
     # via python-slugify
 time-machine==3.2.0
     # via lazyscribe-yaml (pyproject.toml)
-toml-fmt-common==1.3.2
+toml-fmt-common==1.3.5
     # via pyproject-fmt
-tomlkit==0.14.0
+tomlkit==0.15.0
     # via
     #   commitizen
     #   edgetest
 types-python-slugify==8.0.2.20240310
     # via lazyscribe-yaml (pyproject.toml)
-types-pyyaml==6.0.12.20260408
+types-pyyaml==6.0.12.20260518
     # via lazyscribe-yaml (pyproject.toml)
-typing-extensions==4.15.0
+typing-extensions==4.16.0
     # via mypy
-uv==0.10.2
+uv==0.11.16
     # via
     #   lazyscribe-yaml (pyproject.toml)
     #   edgetest
-virtualenv==21.2.1
+virtualenv==21.6.1
     # via pre-commit
-wcwidth==0.6.0
+wcwidth==0.8.2
     # via prompt-toolkit
-wrapt==2.1.2
+wrapt==2.2.2
     # via deprecated

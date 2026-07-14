@@ -20,3 +20,16 @@ with tempfile.TemporaryDirectory() as tmpdir:
     value = exp.load_artifact(name="feature-names")
 
     assert value == ["a", "b", "c"]
+
+with tempfile.TemporaryDirectory() as tmpdir:
+    # Create a project using the YAML 1.2 handler
+    project = Project(Path(tmpdir) / "project.json", mode="w")
+    with project.log(name="YAML12 experiment") as exp:
+        exp.log_artifact(name="feature-names", value=["x", "y", "z"], handler="yaml12")
+
+    project.save()
+
+    exp = project["yaml12-experiment"]
+    value = exp.load_artifact(name="feature-names")
+
+    assert value == ["x", "y", "z"]
