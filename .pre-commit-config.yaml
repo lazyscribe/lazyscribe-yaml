@@ -2,16 +2,16 @@ default_stages: [pre-commit]
 default_install_hook_types: [commit-msg, pre-commit]
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.13.1
+    rev: v0.16.10
     hooks:
       # Run the linter.
-      - id: ruff
+      - id: ruff-check
         args: [ --fix ]
       # Run the formatter.
       - id: ruff-format
         types_or: [ python, jupyter ]
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.18.2
+    rev: v2.4.0
     hooks:
       - id: mypy
         exclude: ^(docs|tests)\/
@@ -21,7 +21,7 @@ repos:
           --namespace-packages,
           --explicit-package-bases,
           --ignore-missing-imports,
-          --non-interactive
+          lazyscribe_yaml
         ]
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.8.19
