@@ -11,7 +11,7 @@ repos:
       - id: ruff-format
         types_or: [ python, jupyter ]
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.18.2
+    rev: v2.4.0
     hooks:
       - id: mypy
         exclude: ^(docs|tests)\/
@@ -21,7 +21,7 @@ repos:
           --namespace-packages,
           --explicit-package-bases,
           --ignore-missing-imports,
-          --non-interactive
+          lazyscribe_yaml
         ]
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.8.19
